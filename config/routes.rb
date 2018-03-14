@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+
+  get 'admin_controller/index'
+
+  resources :recipes
+  #get "/about", controller: 'home', action: 'about', as: 'about'
+  #root controller: 'home', action: 'index'
+  
+  #Standard syntax instead of the hash syntax
+  get '/about', to: 'home#about', as: 'about'
+  get '/contact', to: 'home#contact', as: 'contact'
+  
+  get '/admin', to: 'admin_controller#index', as: 'admin'
+  
+  root to: 'home#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

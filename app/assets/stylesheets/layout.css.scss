@@ -1,0 +1,59 @@
+$backgroundColor: #ddd;
+$navColor: #ccc;
+$contentBackgroundColor: #fff;
+$hoverColor: #999;
+$textColor: #333;
+$width: 960px;
+
+body {
+  background-color: $backgroundColor;
+  color: $textColor;
+}
+
+.container {
+  background-color: $contentBackgroundColor;
+  margin: 0 auto;
+  text-align: center;
+  
+  @media only screen and (min-width: $width){
+    width: $width;
+  }
+  
+  @media only screen and (max-width: $width -1){
+    width: 90%;
+  }
+  
+}
+
+.content, header, footer {
+  padding: 1%;
+}
+
+nav {
+  background-color: $navColor;
+  text-align: center;
+  
+  &>a{
+    color: inherit;
+    padding: 1%;
+    text-decoration: none;
+    
+    &:hover, &:focus{
+      color: $hoverColor;
+    }
+  }
+  
+}
+
+table {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+table > tbody > tr > th {
+  padding: 0 15px;
+}
+
+footer {
+  text-align: center;
+}
